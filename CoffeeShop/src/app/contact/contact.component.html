@@ -1,0 +1,105 @@
+<app-slider></app-slider>
+<section class="section" id="reservation">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 align-self-center">
+                <div class="left-text-content">
+                    <div class="section-heading">
+                        <h6>Contact Us</h6>
+                        <h2>Here You Can Make A Reservation</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 ">
+                            <div class="phone shadow">
+                                <i class="fa fa-phone"></i>
+                                <h4>Contact us!</h4>
+                                <span><a href="#">Phone: 064 4739-224</a><br><a href="#">StrksCoffeeShop@gmail.com</a><br>
+                                <a href="#">Address: Kneza Mihajla 1, Beograd</a></span>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="contact-form ">
+                    <form class="shadow" id="contact" [formGroup]="form" (ngSubmit)="save()">
+                      <div class="row">
+                        <div class="col-lg-12">
+                            <h4>Table Reservation</h4>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                          <fieldset>
+                            <input formControlName="name" name="name" type="text" id="name" placeholder="Your Name*" class="mt-3 mb-0">
+                          </fieldset>
+                          <p class="help-block text-danger mb-1" *ngIf="form.controls['name'].hasError('required')">This field is required</p>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                          <fieldset>
+                          <input formControlName="email" name="email" type="text" id="email" placeholder="Your Email Address" class="mt-3 mb-0">
+                        </fieldset>
+                        <p class="help-block text-danger mb-1" *ngIf="form.controls['email'].hasError('required')">This field is required</p>
+                        <p class="help-block text-danger mb-1" *ngIf="form.controls['email'].hasError('email')">Wrong E-mail format</p>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                          <fieldset>
+                            <input formControlName="phone" name="phone" type="text" id="phone" placeholder="Phone Number*" class="mt-3 mb-0">
+                          </fieldset>
+                          <p class="help-block text-danger mb-1" *ngIf="form.controls['phone'].hasError('required')">This field is required</p>
+                          
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                          <fieldset>
+                            <select formControlName="guests" value="number-guests" name="number-guests" id="number-guests" class="mt-3 mb-0">
+                                <option value="">Number Of Guests</option>
+                                <option value="1" name="1" id="1">1</option>
+                                <option value="2" name="2" id="2">2</option>
+                                <option value="3" name="3" id="3">3</option>
+                                <option value="4" name="4" id="4">4</option>
+                                <option value="5" name="5" id="5">5</option>
+                                <option value="6" name="6" id="6">6</option>
+                            </select>
+                            <p class="help-block text-danger mb-1" *ngIf="form.controls['guests'].hasError('required')">This field is required</p>
+                            
+                          </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <div id="filterDate2">    
+                              <div class="input-group date" data-date-format="mm/dd/yyyy">
+                                <input formControlName="date" name="date" id="date" type="date" class="form-control mt-3" placeholder="mm/dd/yyyy">
+                                <div class="input-group-addon" >
+                                  <span class="glyphicon glyphicon-th"></span>
+                                </div>
+                              </div>
+                              <p class="help-block text-danger mb-1" *ngIf="form.controls['date'].hasError('required')">This field is required</p>
+                            </div>   
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                          <fieldset>
+                            <select formControlName="time" value="time" name="time" id="time" class="mt-3 mb-0">
+                                <option value="">Time</option>
+                                <option value="1" name="Morning" id="Morning">Morning</option>
+                                <option value="2" name="Afternoon" id="Afternoon">Afternoon</option>
+                                <option value="3" name="Night" id="Evening">Evening</option>
+                            </select>
+                            <p class="help-block text-danger mb-1" *ngIf="form.controls['time'].hasError('required')">This field is required</p>
+                          </fieldset>
+                        </div>
+                        <div class="col-lg-12">
+                          <fieldset>
+                            <textarea class="mb-1" formControlName="message" name="message" rows="6" class="mt-3 mb-0" id="message" placeholder="Message"></textarea>
+                            <p class="help-block text-danger mb-1" *ngIf="form.controls['message'].hasError('required')">This field is required</p>
+                          </fieldset>
+                        </div>
+                        <div class="col-lg-12">
+                          <fieldset>
+                            <button [disabled]="!form.valid" type="submit" id="form-submit" class="main-button-icon my-1 boja">Make A Reservation</button>
+                          </fieldset>
+                          <p class="text-success">{{message}}</p>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

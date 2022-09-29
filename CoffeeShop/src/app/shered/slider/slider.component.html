@@ -1,0 +1,30 @@
+<div id="top">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8 center">
+                <div class="main-banner header-text">
+                    <div class="Modern-Slider">
+                      <!-- Item -->
+                      <div class="item" >
+                        <div  class="img-fill">
+                            <img *ngFor="let image of sliderData; let i=index"
+                                [src]="image.imagePath" [alt]="image.alt"
+                                [ngClass]="{'image-active':selextedIndex===i}"
+                                class="fade-in-image"
+                            >
+                        </div>
+                        <ol class="carousel-indicators">
+                            <li  *ngFor="let image of sliderData; let i=index"
+                                  [ngClass]="{'active':selextedIndex===i}"
+                                  (click)="selectImage(i)">
+                            </li>
+                        </ol>
+                      </div>
+                    
+                      <!-- // Item -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

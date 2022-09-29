@@ -1,0 +1,17 @@
+[
+    {
+        "id":1,
+        "imagePath":"assets/images/slider2.jpg",
+        "alt":"restorant_elegance"
+    },
+    {
+        "id":2,
+        "imagePath":"assets/images/slider3.jpg",
+        "alt":"coffee"
+    },
+    {
+        "id":3,
+        "imagePath":"assets/images/slider5.jpg",
+        "alt":"restaurant_birdview"
+    }
+]

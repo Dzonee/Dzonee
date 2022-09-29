@@ -1,0 +1,14 @@
+.my-pagination ::ng-deep .ngx-pagination .current {
+    background: #fb5849;
+  }
+  .pretraga{
+    border: 2px solid rgb(67, 110, 52);
+    padding: 5px;
+    font-weight: 700;
+    color: rgb(67, 110, 52);
+  }
+  .trazenje{
+    border: 2px solid rgb(67, 110, 52);
+    padding: 3px;
+    color: rgb(67, 110, 52);
+  }

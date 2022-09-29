@@ -1,0 +1,70 @@
+<section class="section" id="offers" class="pt-0">
+    <div class="container">
+        <div class="row text-center">
+                <div class="col-4">
+                    <fieldset>
+                        <input (keyup)="getProducts(search.value, sortBy.value)" #search name="search" type="text" id="search" placeholder="Search coffe or pancake..." class=" w-100 mt-3 mb-0 trazenje">
+                    </fieldset>
+                </div>
+               <div class="col-4">
+                    <fieldset>
+                        <select (change)="getProducts(search.value,sortBy.value)" #sortBy  value="sort" name="sort" id="search" class="mt-3 mb-0 w-100 pretraga">
+                            <option value="0" id="0">Sort by...</option>
+                            <option value="1" name="plh" id="1">Price Low-High</option>
+                            <option value="2" name="phl" id="2">Price High-Low</option>
+                            <option value="3" name="rlh" id="3">Hearts Low-High</option>
+                            <option value="4" name="rhl" id="4">Hearts High-Low</option>
+                        </select>
+                    </fieldset>
+               </div>
+               <div class="col-4">
+                        <fieldset>
+                            <select (change)="getProducts(search.value,sortBy.value,timeTo.value)" #timeTo  value="time" name="time" id="search" class="mt-3 mb-0 w-100 pretraga">
+                                <option value="0" id="0">Category</option>
+                                <option *ngFor="let c of categories" value="{{c.id}}" id="{{c.id}}}">{{c.name}}</option>
+                            </select>
+                        </fieldset>
+                </div>
+
+            <div class="col-lg-12">
+                <div class="row" id="tabs">
+                    <div class="col-lg-12">
+                        <section class='tabs-content'>
+                            <article id='tabs-1'>
+                                <div class="row">
+                                    <ng-container *ngIf="products.length != 0; else elseBlock">
+                                        <div class="col-lg-12 d-flex flex-wrap" >
+                                                <div class="fade-in-fwd tab-item col-6" *ngFor="let p of products | paginate:{ itemsPerPage: 4, currentPage: page}">
+                                                    <div class="col-5">
+                                                        <img src="assets/images/{{p.image}}" alt="{{p.name}}">
+                                                    </div>
+                                                    <h4>{{p.name | uppercase}}</h4>
+                                                    <p [innerHTML]="heartNumber(p.hearts)" ></p>
+                                                    <p class="cat">Category: <span [innerHTML]="categoryName(p.cat)"></span></p>
+                                                    <p>{{p.description}}</p>
+                                                    <div class="price">
+                                                        <h6>{{p.price | currency}}</h6>
+                                                    </div>
+                                                </div>                           
+                                            <pagination-controls class="text-center my-pagination col-12"
+                                                                (pageChange)="page = $event">
+                                            </pagination-controls>
+                                        </div>
+                                    </ng-container>
+                                    <ng-template #elseBlock >
+                                       <div class="container">
+                                           <div class="row">
+                                            <p id="notFound">{{notFoundProducts | uppercase}}</p>
+                                           </div>
+                                       </div>
+                                            
+                                    </ng-template>
+                                </div>
+                            </article>  
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

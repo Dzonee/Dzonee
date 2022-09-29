@@ -1,0 +1,35 @@
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a routerLink="/" class="logo" [@logoAnimation]>
+                        <img width="70px" src="assets/images/logo.png" alt="StrksCoffee">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li *ngFor="let n of navigation" >
+                            <a class="head" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="{{n.path}}" class="">{{n.name}}</a>
+                        </li>
+                    </ul>        
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<!-- <a routerLink="/" class="logo" [@logoAnimation]>
+    <img src="assets/images/klassy-logo.png" align="klassy cafe html template">
+</a> -->
+
+<!-- 
+<li *ngFor="let n of navigation" class="scroll-to-section"><a routerLink="{{n.path}}">{{n.name}}</a></li> -->

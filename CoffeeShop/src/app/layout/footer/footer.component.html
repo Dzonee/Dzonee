@@ -1,0 +1,26 @@
+<footer class="footColor">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-xs-12">
+                <div class="right-text-content">
+                        <ul class="social-icons">
+                            <li *ngFor="let info of socialInfo">
+                                <a href="{{info.href}}"><i class="{{info.class}} infoColor"></i></a>
+                            </li>
+                            
+                        </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="logo">
+                    <a routerLink="/"><img width="80px" src="assets/images/logo.png" alt="logo_cafe"></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-xs-12">
+                <div class="left-text-content">
+                    <p>© Copyright CoffeeShop STRKS</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

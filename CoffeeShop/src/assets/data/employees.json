@@ -1,0 +1,23 @@
+[
+    {
+        "id":1,
+        "firstName":"Tom",
+        "lastName":"Walker",
+        "position":"Latte Art",
+        "image":"employee4.jpg"
+    },
+    {
+        "id":2,
+        "firstName":"Anfisa",
+        "lastName":"Letyago",
+        "position":"Manager",
+        "image":"employee2.jpg"
+    },
+    {
+        "id":3,
+        "firstName":"Peter",
+        "lastName":"Portman",
+        "position":"Pancake Chef",
+        "image":"employee3.jpg"
+    }
+]

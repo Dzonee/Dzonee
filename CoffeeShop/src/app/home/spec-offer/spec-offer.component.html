@@ -1,0 +1,29 @@
+<section class="section" id="menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="section-heading">
+                    <h6>What shoud you drink?</h6>
+                    <h2>Our coffees are on discount in this month</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class=" row mt-2">
+            <div class="item col-sm-3 " *ngFor="let p of products" >               
+                <div class='card' >
+                    <div class="price p-2">
+                        <h6><del>{{p.price | currency}}</del>&nbsp;<i class="fa-solid fa-arrow-right"></i>&nbsp;<span>{{discountForCoffee(p.price,p.discount) | currency }}</span></h6>
+                    </div>
+                    <img class="pt-3" src="assets/images/kafa{{p.id}}.jpg" alt="{{p.name}}">
+                    <div class="w-100">
+                        <h5 class="imeKafe pt-3">{{p.name}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+

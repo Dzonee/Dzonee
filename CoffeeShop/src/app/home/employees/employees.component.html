@@ -1,0 +1,25 @@
+<section class="section" id="chefs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 offset-lg-4 text-center">
+                <div class="section-heading">
+                    <h6>Our people</h6>
+                    <h2>We offer the best expirience for you</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div *ngFor="let e of employees" class="col-lg-4">
+                <div class="chef-item">
+                    <div class="thumb">
+                        <img src="assets/images/{{e.image}}" alt="{{e.firstName}}">
+                    </div>
+                    <div class="down-content">
+                        <h4>{{e.firstName}} {{e.lastName}}</h4>
+                        <span>{{e.position}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

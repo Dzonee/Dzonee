@@ -1,0 +1,10 @@
+.footColor{
+    background-color: rgb(91, 114, 64);
+}
+.infoColor{
+    color: rgb(91, 114, 64);
+}
+.infoColor:hover{
+    color: rgb(255, 183, 0);
+    transition: 0.5s;
+}

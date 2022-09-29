@@ -1,0 +1,18 @@
+.img-fill img{
+    display: none;
+}
+.img-fill img.image-active{
+    display: block;
+    width: 100%;
+}
+.fade-in-image {
+    animation: fadeIn 4s;
+    
+  }
+  .center{
+    margin: 0 auto;
+  }
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
