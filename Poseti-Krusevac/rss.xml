@@ -1,0 +1,14 @@
+<rss version="2.0">
+<channel>
+    <item>
+        <title>Novi izlet u ponudi!</title>
+        <link>privremeno/izleti.html</link>
+        <description>Obilazak Vrnjacke banje!</description>
+    </item>
+    <item>
+        <title>Hotel Rubin renoviran! Od sada u ponudi!</title>
+        <link>privremeno/prenociste.html</link>
+        <description>Nov hotel sa dugom tradicijom!</description>
+    </item>
+</channel>
+</rss>

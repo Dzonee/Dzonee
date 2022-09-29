@@ -1,0 +1,425 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: #e6f7ff;
+	font-family: 'Alatsi', sans-serif;
+}
+
+#okvir {
+	width: 60%;
+	margin: 0 auto;
+	padding-top: 80px;
+	min-height: 100vh;
+}
+
+#okvir h1 {
+	text-align: center;
+	color: #660000;
+}
+
+	/*Header*/
+	
+#zaglavlje {
+	width: 96%;
+	background-color: #660000;
+	padding: 10px 2%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	z-index: 2;
+}
+
+#logo img {
+	display: flex;
+	width: 50px;
+}
+
+#zaglavlje nav ul {
+	list-style-type: none;
+	display: flex;
+}
+
+#zaglavlje ul li {
+	display: inline-block;	
+}
+
+#zaglavlje nav a {
+	text-decoration: none;
+	color: #e6f7ff;
+	font-size: 15px;
+	padding: 25px 20px;	
+}
+
+#zaglavlje ul a:hover {
+	background-color: #e6f7ff;
+	color: #660000;
+}
+
+#zaglavlje .aktiv {
+	background-color: #e6f7ff;
+	color: #660000;
+}
+
+	/* Footer */
+	
+footer {
+	padding: 50px 60px;
+	height: 70px;
+	background: #660000;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;	
+}
+
+footer ul {
+	list-style-type: none;
+}
+
+footer ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+.border	{
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	padding: 65px 280px 0px 280px;	
+}
+.centar {
+	color: #fff;
+	text-align: center;
+}
+footer ul li {
+	color: #fff;
+}
+footer ul li span {
+	font-size: 15px;
+	padding: 5px;
+}
+
+	/*Index*/
+	
+
+.slikaLevo, .slikaDesno {
+margin-top: 10px;
+display: flex;
+justify-content: space-between;
+animation-duration: 1.5s;
+transition: ease-in;
+}
+
+.slikaLevo {
+	animation-name: slideLeft;
+}
+
+.slikaDesno {
+	animation-name: slideRight;
+}
+
+#Tekst {
+	width: 70%;
+	display: flex;
+	justify-content: column;	
+}
+
+.slikaLevo img, .slikaDesno img {
+	width: 30%;
+	padding: 40px;
+}
+
+.slikaLevo h3, .slikaDesno h3 {
+	text-align: center;
+	font-size: 24px;
+	margin-bottom: 10px;
+	color: #660000;
+}
+
+.slikaLevo p, .slikaDesno p {
+	color: #660000;	
+}
+
+.slikaLevo, .slikaDesno {
+	padding: 30px;	
+	border-bottom: 2px solid #660000;	
+}
+
+@keyframes slideLeft {
+	from{
+		position: relative;
+		left: -1000px;
+	}
+	to{
+		position: relative;
+		left: 0;
+	}
+}
+
+@keyframes slideRight {
+	from{
+		position: relative;
+		right: -1000px;
+	}
+	to{
+		position: relative;
+		right: 0;
+	}
+}
+	/* Prenociste */
+
+.prenociste {
+	width: 100%;
+}
+
+.prenocisteRed {
+	display: flex;
+	margin: 80px auto;
+	justify-content: space-between;
+}
+
+.prenocisteNaslov p {
+	text-align: center;
+	color: #660000;
+}
+
+.prenocistePonuda {
+	width: 400px;
+	height: 350px;
+	border-radius: 15px 50px;
+	-webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.prenocistePonuda h4 {
+	font-size: 20px;
+	color: #660000;
+	padding: 10px;
+}
+
+.prenocistePonuda p {
+	padding: 5px;
+	color: #660000;
+}
+
+.slikaPrenocista {
+	height: 150px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	background-position: center;
+	background-size: cover;
+}
+
+.prenociste1 {
+	background-image: url('../slike/slika7.jpg');
+}
+.prenociste2 {
+	background-image: url('../slike/slika8.jpg');
+}
+.prenociste3 {
+	background-image: url('../slike/slika9.jpg');
+}
+.prenociste4 {
+	background-image: url('../slike/slika10.jpg');
+}
+.prenociste5 {
+	background-image: url('../slike/slika11.jpg');
+}
+.prenociste6 {
+	background-image: url('../slike/slika12.jpg');
+}
+
+.cenaIznajmi {
+	padding: 0 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cenaIznajmi a {
+	background: #660000;
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+
+.cenaIznajmi a:hover {
+	background: transparent;
+	color: #660000;
+	border: 2px solid #660000;
+}
+
+.prenocisteRed:nth-child(even) {	
+	animation-name: slideLeft;
+	animation-duration: 1s;
+}
+
+.prenocisteRed:nth-child(odd) {	
+	animation-name: slideRight;
+	animation-duration: 1s;
+}
+
+	/*Izleti*/
+	
+#okvirIzleti {
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 80px;
+	min-height: 90vh;
+}
+
+#okvirIzleti h1 {
+	text-align: center;
+	color: #660000;
+}
+
+.izlet1 {
+	background-image: url('../slike/muzej.jpg');
+}
+.izlet2 {
+	background-image: url('../slike/jastrebac.jpg');
+}
+.izlet3 {
+	background-image: url('../slike/slobodiste.jpg');
+}
+.izlet4 {
+	background-image: url('../slike/kula.jpg');
+}
+.izlet5 {
+	background-image: url('../slike/banja.jpg');
+}
+.izleti {
+	width: 100%;
+}
+
+.izletiRed {
+	display: flex;
+	margin: 80px auto;
+	justify-content: space-between;
+	animation-name: slideRight;
+	animation-duration: 1s;	
+}
+
+.izletiNaslov p {
+	text-align: center;
+	color: #660000;
+}
+
+.izletiPonuda {
+	width: 400px;
+	height: 300px;
+	border-radius: 15px 50px;
+	-moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.izletiPonuda h4 {
+	font-size: 20px;
+	color: #660000;
+	padding: 10px;
+}
+
+.izletiPonuda p {
+	padding: 5px;
+	color: #660000;	
+}
+
+.slikaIzleta {
+	height: 150px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	background-position: center;
+	background-size: cover;
+}
+
+.izletiPonuda ul {
+	list-style-type: none;
+	padding-left: 10px;
+	color: #660000;
+}
+
+#forma{
+	margin: 0 auto;
+}
+
+form{
+	display: block;
+	margin: 0 auto;
+	width: 300px;
+	background-color: #660000;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+#forma h4 {
+	color: #fff;
+	text-align: center;
+	font-weight: 400;
+}
+
+#forma form input, #forma form select {
+		display: block;
+		width: 100%;
+		margin-top: 20px;
+		height: 30px;
+		border-radius: 5px;
+		padding: 5px;
+		box-sizing: border-box;
+}
+
+
+
+	/*O autoru*/
+
+#autor {
+	max-width: 800px;
+	margin-top: 20px;
+	display: flex;	
+	border: 2px solid #660000;
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	padding: 50px;
+	-moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+	animation-name: slideLeft;
+	animation-duration: 1s;
+	color: #660000;
+}
+
+#autor img {
+	height: 400px;
+	width: 210px;
+}
+
+#autor ul {
+	padding-left: 100px;
+	
+}
+
+#autor ul li {	
+	color: #660000;
+	padding-top: 30px;
+	list-style-type: none;
+	word-spacing: 2px;
+}
+
+#autor ul li a {
+	color: #660000;
+	font-style: bold;
+}
+
+#biografija p {
+	max-width: 800px;
+	word-spacing: 2px;
+	margin-top: 50px;	
+}
+
+
+
